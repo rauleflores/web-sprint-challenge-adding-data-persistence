@@ -1,7 +1,10 @@
 {
   "scripts": {
     "server": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "kml": "knex migrate:latest",
+    "kmr": "knex migrate:rollback",
+    "ksr": "knex seed:run"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
