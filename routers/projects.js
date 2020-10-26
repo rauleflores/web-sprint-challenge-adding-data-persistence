@@ -27,7 +27,7 @@ router.post("/projects", async (req, res, next) => {
     const newProject = {
       name: req.body.name,
       description: req.body.description,
-      completed: false,
+      completed: req.body.completed || false,
     };
 
     if (!newProject.name) {

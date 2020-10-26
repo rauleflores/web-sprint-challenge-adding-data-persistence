@@ -16,7 +16,9 @@ function add(project) {
     });
 }
 
-function update(changes, id) {}
+function update(changes, id) {
+  return db("projects").where("id", id).update(changes);
+}
 
 function remove(id) {}
 
@@ -24,4 +26,5 @@ module.exports = {
   find,
   findById,
   add,
+  update,
 };
